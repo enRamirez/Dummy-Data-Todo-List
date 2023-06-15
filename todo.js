@@ -31,12 +31,22 @@ const populateTodos = () => {
 
     let todoList = document.getElementById('todo-list')
 
+
+    for (let i = 0; i < arrayOfTodos.length; i++){
+
     let todoListItem = document.createElement('LI')
 
-    let todoText = document.createTextNode(arrayOfTodos[0].title)
+    let todoText = document.createTextNode(arrayOfTodos[i].title)
 
     todoListItem.appendChild(todoText)
 
     todoList.appendChild(todoListItem)
 
+    }
 }
+
+
+
+// Now that you have one element created and showing up on the screen, 
+// put the same code inside a for loop and iterate over the length of the array. 
+// But now just change out [0] for [i]! (Refer back to your for loop lesson if needed)
