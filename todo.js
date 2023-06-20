@@ -47,6 +47,17 @@ const populateTodos = () => {
 
 
 
-// Now that you have one element created and showing up on the screen, 
-// put the same code inside a for loop and iterate over the length of the array. 
-// But now just change out [0] for [i]! (Refer back to your for loop lesson if needed)
+// Using the assignment from yesterday, create a branch called: " Todo-Filtering ".
+// Fetch the same data.
+// Store the data in a variable.
+// Add an input for the userID. This input should only take in a number from 1 - 10.
+// Add a button that when clicked will:
+// clear the previous todos from the view
+// and populate it with only todos with the userID that matches the number inputted.
+// then stores the currently filtered todos in a variable so that ...
+// You can create two more buttons that when clicked:
+
+// removes those todos from the view
+// and shows only todos that are either:
+// completed
+// not completed
