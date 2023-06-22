@@ -47,13 +47,54 @@ const populateTodos = () => {
 
 
 
-// Using the assignment from yesterday, create a branch called: " Todo-Filtering ".
-// Fetch the same data.
-// Store the data in a variable.
-// Add an input for the userID. This input should only take in a number from 1 - 10.
+
+// DONE Using the assignment from yesterday, create a branch called: " Todo-Filtering ".
+
+// DONE Fetch the same data.
+// DONE (arrayOfTodos) Store the data in a variable.
+
+// DONE Add an input for the userID. This input should only take in a number from 1 - 10.
+
 // Add a button that when clicked will:
-// clear the previous todos from the view
-// and populate it with only todos with the userID that matches the number inputted.
+
+    // DONE clear the previous todos from the view : seperate function
+    // DONE and populate the list with only todos with the userID that matches the number inputted. : seperate function
+
+    const orderedList = document.getElementById("todo-list");
+
+
+    const clearTodos = () => {
+        orderedList.innerHTML = null;
+ 
+}
+
+
+const filterByID = () => {
+
+    clearTodos();
+
+    // capture the ol
+   let todoList = document.getElementById('todo-list')   
+
+   // input number from the user
+   let userNum = document.getElementById("number_input").value
+
+   let filterdArray = arrayOfTodos.filter( (users) => users.userId == userNum )
+   
+   //for loop
+   for(let i=0; i < filterdArray.length; i++) {
+
+      let todoListItem = document.createElement('LI')                    
+      let todoText = document.createTextNode(filterdArray[i].title)  
+      // build the string of code
+      todoListItem.appendChild(todoText)  
+      todoList.appendChild(todoListItem)   
+   
+   } // end for
+
+} //end function
+
+
 // then stores the currently filtered todos in a variable so that ...
 // You can create two more buttons that when clicked:
 
